@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ConvertItApp</string>
+
+    //Main Screen
+    //title
+    <string name="title">ConvertIt</string>
+    //buttons for conversion activities
+    <string name="massBtn">Mass</string>
+    <string name="currencyBtn">Currency</string>
+
+    //Mass Screen
+    //Mass Array
+    <string-array name="massArray">
+        <item>Kilogram</item>
+        <item>Gram</item>
+        <item>Milligram</item>
+        <item>Pound</item>
+    </string-array>
+    //Mass Screen Title
+    <string name="massTitle">Mass</string>
+    //Calculate Mass Button
+    <string name="calcMass">Convert</string>
+    //Clear Mass button Maybe
+    <string name="clrMass">Clear</string>
+    //Mass misc
+    <string name="massFrom">From:</string>
+    <string name="massTo">To:</string>
+</resources>
