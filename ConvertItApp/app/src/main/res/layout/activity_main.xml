@@ -32,6 +32,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/currencyBtn" />
+
+        <Button
+            android:id="@+id/tempBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/tempBtn" />
+
+
     </LinearLayout>
 
 </LinearLayout>

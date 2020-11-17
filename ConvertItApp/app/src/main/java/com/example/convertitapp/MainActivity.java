@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button massBtn = (Button) findViewById(R.id.massBtn);
         Button currencyBtn = (Button) findViewById(R.id.currencyBtn);
-
+        Button tempBtn = (Button) findViewById(R.id.tempBtn);
 
 
         massBtn.setOnClickListener(new View.OnClickListener() {
@@ -26,6 +26,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        currencyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CurrencyConvert.class));
+            }
+        });
+
+
+        tempBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, tempConvert.class));
+            }
+        });
 
 
     }
