@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,9 +15,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button massBtn = (Button) findViewById(R.id.massBtn);
-        Button currencyBtn = (Button) findViewById(R.id.currencyBtn);
-        Button tempBtn = (Button) findViewById(R.id.tempBtn);
+        ImageButton massBtn = (ImageButton) findViewById(R.id.massBtn);
+        ImageButton currencyBtn = (ImageButton) findViewById(R.id.currencyBtn);
+        ImageButton tempBtn = (ImageButton) findViewById(R.id.tempBtn);
 
 
         massBtn.setOnClickListener(new View.OnClickListener() {

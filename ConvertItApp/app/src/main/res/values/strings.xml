@@ -8,6 +8,9 @@
     <string name="massBtn">Mass</string>
     <string name="currencyBtn">Currency</string>
     <string name="tempBtn">Temperature</string>
+    <string name="volumeBtn">Volume</string>
+    <string name="areaBtn">Area</string>
+    <string name="Lengthbtn">Length</string>
 
     //Mass Screen
     //Mass Array
