@@ -29,6 +29,7 @@
     //Mass misc
     <string name="massFrom">From:</string>
     <string name="massTo">To:</string>
+<<<<<<< HEAD
 
 
     <string-array name="currencies">
@@ -60,4 +61,12 @@
     </string-array>
 
 
+=======
+    <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="tab_text_1">Common</string>
+    <string name="tab_text_2">Science</string>
+    <string name="tab_text_3">Misc</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+>>>>>>> d5c0c2b82d3455e204c9eacfba06a99639302769
 </resources>
