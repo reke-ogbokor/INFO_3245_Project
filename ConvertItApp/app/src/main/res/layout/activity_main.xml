@@ -9,7 +9,6 @@
     android:background="@drawable/gradient"
     tools:context=".MainActivity">
 
-<<<<<<< HEAD
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
@@ -22,8 +21,6 @@
         android:text="Ultimate Converter"
         android:textAlignment="center" />
 
-=======
->>>>>>> main
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
