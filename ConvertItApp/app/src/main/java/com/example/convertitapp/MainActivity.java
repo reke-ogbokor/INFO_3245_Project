@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton massBtn = (ImageButton) findViewById(R.id.massBtn);
         ImageButton currencyBtn = (ImageButton) findViewById(R.id.currencyBtn);
         ImageButton tempBtn = (ImageButton) findViewById(R.id.tempBtn);
+        ImageButton lengthBtn = (ImageButton) findViewById(R.id.lenthBtn);
 
 
         massBtn.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, tempConvert.class));
+            }
+        });
+
+
+        lengthBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, LengthConvert.class));
             }
         });
 

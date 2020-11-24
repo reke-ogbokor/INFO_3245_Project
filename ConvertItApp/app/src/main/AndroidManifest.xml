@@ -5,28 +5,23 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
+        <activity android:name=".LengthConvert"></activity>
         <activity android:name=".CurrencyConvert"></activity>
         <activity android:name=".tempConvert" />
         <activity android:name=".MassConvert" />
         <activity android:name=".MainActivity">
-=======
-        <activity android:name=".HomeScreen">
->>>>>>> d5c0c2b82d3455e204c9eacfba06a99639302769
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".MassConvert" />
-        <activity android:name=".MainActivity">
 
         </activity>
     </application>

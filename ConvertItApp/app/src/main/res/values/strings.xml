@@ -21,7 +21,7 @@
         <item>Pound</item>
     </string-array>
     //Mass Screen Title
-    <string name="massTitle">Mass</string>
+    <string name="massTitle">Mass Converter</string>
     //Calculate Mass Button
     <string name="calcMass">Convert</string>
     //Clear Mass button Maybe
@@ -29,7 +29,7 @@
     //Mass misc
     <string name="massFrom">From:</string>
     <string name="massTo">To:</string>
-<<<<<<< HEAD
+
 
 
     <string-array name="currencies">
@@ -61,12 +61,18 @@
     </string-array>
 
 
-=======
-    <string name="title_activity_home_screen">HomeScreen</string>
-    <string name="tab_text_1">Common</string>
-    <string name="tab_text_2">Science</string>
-    <string name="tab_text_3">Misc</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
->>>>>>> d5c0c2b82d3455e204c9eacfba06a99639302769
+
+    <string-array name="lengthArray">
+        <item>Millimeter</item>
+        <item>Centimeter</item>
+        <item>Meter</item>
+        <item>Inch</item>
+        <item>Foot</item>
+    </string-array>
+
+    //length title
+    <string name="lengthTitle">Length Converter</string>
+    //Calculate length button
+
+
 </resources>
