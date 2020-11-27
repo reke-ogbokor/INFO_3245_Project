@@ -1,8 +1,6 @@
 package com.example.convertitapp;
 
 
-import android.util.Log;
-
 import com.digidemic.unitof.UnitOf;
 
 import java.text.DecimalFormat;
@@ -13,7 +11,7 @@ public class Converter {
     private UnitOf.Area unitOfArea;
     private String unit;
     private Double input;
-    private static DecimalFormat df2 = new DecimalFormat("#.######");
+    private static DecimalFormat df2 = new DecimalFormat("#.#############");
 
 
     public Converter() {
@@ -23,14 +21,6 @@ public class Converter {
     public void setUnit(String text) {
         this.unit = text;
 
-    }
-
-    public String getUnit() {
-        return unit;
-    }
-
-    public Double getInput() {
-        return input;
     }
 
     public void setInput(Double input) {
@@ -93,6 +83,60 @@ public class Converter {
         result.add(df2.format(unitOfVolume.toTablespoonsUS()));
         result.add(df2.format(unitOfVolume.toTeaspoonsUS()));
 
+        return result;
+    }
+
+    public ArrayList<String> convertArea() {
+
+        ArrayList<String> result = new ArrayList<>();
+
+        switch (unit) {
+            case "m2":
+                unitOfArea = new UnitOf.Area().fromSquareMeters(input);
+                break;
+            case "km2":
+                unitOfArea = new UnitOf.Area().fromSquareKilometers(input);
+                break;
+            case "cm2":
+                unitOfArea = new UnitOf.Area().fromSquareCentimeters(input);
+                break;
+            case "mm2":
+                unitOfArea = new UnitOf.Area().fromSquareMillimeters(input);
+                break;
+            case "\u00B52":
+                unitOfArea = new UnitOf.Area().fromSquareMicrometers(input);
+                break;
+            case "mi2":
+                unitOfArea = new UnitOf.Area().fromSquareMiles(input);
+                break;
+            case "yd2":
+                unitOfArea = new UnitOf.Area().fromSquareYards(input);
+                break;
+            case "ft2":
+                unitOfArea = new UnitOf.Area().fromSquareFeet(input);
+                break;
+            case "in2":
+                unitOfArea = new UnitOf.Area().fromSquareInches(input);
+                break;
+            case "ha":
+                unitOfArea = new UnitOf.Area().fromHectares(input);
+                break;
+            case "acre":
+                unitOfArea = new UnitOf.Area().fromAcres(input);
+                break;
+        }
+
+        result.add(df2.format(unitOfArea.toSquareMeters()));
+        result.add(df2.format(unitOfArea.toSquareKilometers()));
+        result.add(df2.format(unitOfArea.toSquareCentimeters()));
+        result.add(df2.format(unitOfArea.toSquareMillimeters()));
+        result.add(df2.format(unitOfArea.toSquareMicrometers()));
+        result.add(df2.format(unitOfArea.toSquareMiles()));
+        result.add(df2.format(unitOfArea.toSquareYards()));
+        result.add(df2.format(unitOfArea.toSquareFeet()));
+        result.add(df2.format(unitOfArea.toSquareInches()));
+        result.add(df2.format(unitOfArea.toHectares()));
+        result.add(df2.format(unitOfArea.toAcres()));
 
         return result;
     }

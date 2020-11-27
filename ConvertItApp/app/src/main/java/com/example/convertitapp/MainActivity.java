@@ -61,12 +61,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        areaBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(MainActivity.this, LengthConvert.class));
-//            }
-//        });
+        areaBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Area.class));
+            }
+        });
 
 
     }

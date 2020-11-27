@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".Volume"
     android:background="@color/backgroundColor">
@@ -61,7 +61,7 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -498,47 +498,6 @@
 
                     <TextView
                         android:id="@+id/textView_10"
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="start|center_vertical"
-                        android:text="Sample"
-                        android:textAlignment="textStart"
-                        android:textSize="@dimen/cd_textSize"/>
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/lineColor"/>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/cardView_height">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:gravity="center">
-
-                    <TextView
-                        android:id="@+id/textView_result_11"
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="Sample"
-                        android:gravity="center_vertical|end"
-                        android:textAlignment="textEnd"
-                        android:layout_marginRight="10dp"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="@dimen/cd_textSize"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:id="@+id/textView_11"
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"

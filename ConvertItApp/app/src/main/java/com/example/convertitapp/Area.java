@@ -19,7 +19,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Volume extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class Area extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Double input;
     Spinner spinner;
@@ -36,7 +36,7 @@ public class Volume extends AppCompatActivity implements AdapterView.OnItemSelec
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_volume);
+        setContentView(R.layout.activity_area);
 
         spinner = findViewById(R.id.spinner);
         fillSpinner();
@@ -44,9 +44,9 @@ public class Volume extends AppCompatActivity implements AdapterView.OnItemSelec
 
         editText = findViewById(R.id.editTextNumber);
         editText.setText("1.0", TextView.BufferType.EDITABLE);
-        converter.setUnit("m3");
+        converter.setUnit("m2");
         converter.setInput(1.0);
-        resultsArray = converter.convertVolume();
+        resultsArray = converter.convertArea();
         updateResultTextView();
 
         editText.addTextChangedListener(new TextWatcher() {
@@ -60,7 +60,7 @@ public class Volume extends AppCompatActivity implements AdapterView.OnItemSelec
 
 
                 if(charSequence.length() == 0)
-                   input = 0.0;
+                    input = 0.0;
                 else {
                     input = Double.parseDouble(editText.getText().toString());
                 }
@@ -68,7 +68,7 @@ public class Volume extends AppCompatActivity implements AdapterView.OnItemSelec
                 converter.setInput(input);
                 converter.setUnit(spinnerText);
 
-                resultsArray = converter.convertVolume();
+                resultsArray = converter.convertArea();
                 updateResultTextView();
             }
 
@@ -77,10 +77,6 @@ public class Volume extends AppCompatActivity implements AdapterView.OnItemSelec
 
             }
         });
-
-
-
-
 
     }
 
@@ -100,7 +96,7 @@ public class Volume extends AppCompatActivity implements AdapterView.OnItemSelec
         converter.setInput(input);
         converter.setUnit(spinnerText);
 
-        resultsArray = converter.convertVolume();
+        resultsArray = converter.convertArea();
         updateResultTextView();
 
 
@@ -115,35 +111,55 @@ public class Volume extends AppCompatActivity implements AdapterView.OnItemSelec
 
     private void unitListInitializer() {
 
-        SpannableString string = new SpannableString("m3");
+        SpannableString string = new SpannableString("m2");
         string.setSpan(new SuperscriptSpan(), 1, 2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         string.setSpan(new RelativeSizeSpan(0.75f), 1, 2, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         unitList.add(string);
 
-        string = new SpannableString("km3");
+        string = new SpannableString("km2");
         string.setSpan(new SuperscriptSpan(), 2, 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         string.setSpan(new RelativeSizeSpan(0.75f), 2, 3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         unitList.add(string);
 
-        string = new SpannableString("cm3");
+        string = new SpannableString("cm2");
         string.setSpan(new SuperscriptSpan(), 2, 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         string.setSpan(new RelativeSizeSpan(0.75f), 2, 3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         unitList.add(string);
 
-        string = new SpannableString("mm3");
+        string = new SpannableString("mm2");
+        string.setSpan(new SuperscriptSpan(), 2, 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        string.setSpan(new RelativeSizeSpan(0.75f), 2, 3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        unitList.add(string);
+
+        string = new SpannableString("\u00B52");
+        string.setSpan(new SuperscriptSpan(), 1, 2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        string.setSpan(new RelativeSizeSpan(0.75f), 1, 2, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        unitList.add(string);
+
+        string = new SpannableString("mi2");
+        string.setSpan(new SuperscriptSpan(), 2, 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        string.setSpan(new RelativeSizeSpan(0.75f), 2, 3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        unitList.add(string);
+
+        string = new SpannableString("yd2");
+        string.setSpan(new SuperscriptSpan(), 2, 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        string.setSpan(new RelativeSizeSpan(0.75f), 2, 3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        unitList.add(string);
+
+        string = new SpannableString("ft2");
+        string.setSpan(new SuperscriptSpan(), 2, 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        string.setSpan(new RelativeSizeSpan(0.75f), 2, 3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        unitList.add(string);
+
+        string = new SpannableString("in2");
         string.setSpan(new SuperscriptSpan(), 2, 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         string.setSpan(new RelativeSizeSpan(0.75f), 2, 3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         unitList.add(string);
 
         unitList.addAll(Arrays.asList(
-        new SpannableString("l"),
-                new SpannableString("ml"),
-                new SpannableString("gal (US)"),
-                new SpannableString("qt (US)"),
-                new SpannableString("pt (US)"),
-                new SpannableString("fl oz (US)"),
-                new SpannableString("tbsp (US)"),
-                new SpannableString("tsp (US)" )));
+                new SpannableString("ha"),
+                new SpannableString("acre")));
+
 
     }
 
@@ -206,11 +222,6 @@ public class Volume extends AppCompatActivity implements AdapterView.OnItemSelec
                     resultTextViews[i] = findViewById(R.id.textView_result_10);
                     textViews[i].setText(unitList.get(i));
                     break;
-                case 11:
-                    textViews[i] = findViewById(R.id.textView_11);
-                    resultTextViews[i] = findViewById(R.id.textView_result_11);
-                    textViews[i].setText(unitList.get(i));
-                    break;
             }
 
         }
@@ -243,8 +254,6 @@ public class Volume extends AppCompatActivity implements AdapterView.OnItemSelec
                 case 9:
                     resultTextViews[i].setText(resultsArray.get(i));
                 case 10:
-                    resultTextViews[i].setText(resultsArray.get(i));
-                case 11:
                     resultTextViews[i].setText(resultsArray.get(i));
             }
 
