@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">ConvertItApp</string>
+    <string name="volume_page">Volume</string>
 
     //Main Screen
     //title
@@ -31,7 +32,6 @@
     <string name="massTo">To:</string>
 
 
-
     <string-array name="currencies">
         <item>EUR</item>
 
@@ -61,7 +61,6 @@
     </string-array>
 
 
-
     <string-array name="lengthArray">
         <item>Millimeter</item>
         <item>Centimeter</item>
@@ -73,6 +72,24 @@
     //length title
     <string name="lengthTitle">Length Converter</string>
     //Calculate length button
+
+    <string name="m_cubed">m3</string>
+    <string name="km_cubed">km3</string>
+    <string name="cm_cubed">cm3</string>
+    <string name="mm_cubed">mm3</string>
+    <string name="liter">l</string>
+    <string name="milliliter">ml</string>
+    <string name="gallon">gal (US)</string>
+    <string name="quart">qt (US)</string>
+    <string name="pint">pt (US)</string>
+    <string name="fluid_ounce">fl oz (US)</string>
+    <string name="tablespoon">tbsp (US)</string>
+    <string name="teaspoon">tsp (US)</string>
+
+
+
+
+
 
 
 </resources>
