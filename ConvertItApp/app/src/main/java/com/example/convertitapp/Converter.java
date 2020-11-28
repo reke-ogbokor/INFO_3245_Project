@@ -11,7 +11,7 @@ public class Converter {
     private UnitOf.Area unitOfArea;
     private String unit;
     private Double input;
-    private static DecimalFormat df2 = new DecimalFormat("#.#############");
+    private static DecimalFormat df2 = new DecimalFormat("#.##########");
 
 
     public Converter() {
