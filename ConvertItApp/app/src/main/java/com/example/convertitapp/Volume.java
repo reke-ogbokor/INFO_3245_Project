@@ -43,7 +43,7 @@ public class Volume extends AppCompatActivity implements AdapterView.OnItemSelec
         initializeUnitTextView();
 
         editText = findViewById(R.id.editTextNumber);
-        editText.setText("1.0", TextView.BufferType.EDITABLE);
+        editText.setText("0", TextView.BufferType.EDITABLE);
         converter.setUnit("m3");
         converter.setInput(1.0);
         resultsArray = converter.convertVolume();

@@ -43,7 +43,7 @@ public class Area extends AppCompatActivity implements AdapterView.OnItemSelecte
         initializeUnitTextView();
 
         editText = findViewById(R.id.editTextNumber);
-        editText.setText("1.0", TextView.BufferType.EDITABLE);
+        editText.setText("0", TextView.BufferType.EDITABLE);
         converter.setUnit("m2");
         converter.setInput(1.0);
         resultsArray = converter.convertArea();

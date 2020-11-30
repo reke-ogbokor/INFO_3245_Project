@@ -50,22 +50,22 @@ public class Converter {
             case "ml":
                 unitOfVolume = new UnitOf.Volume().fromMilliliters(input);
                 break;
-            case "gal":
+            case "gal (US)":
                 unitOfVolume = new UnitOf.Volume().fromGallonsUS(input);
                 break;
-            case "qt":
+            case "qt (US)":
                 unitOfVolume = new UnitOf.Volume().fromQuartsUS(input);
                 break;
-            case "pt":
+            case "pt (US)":
                 unitOfVolume = new UnitOf.Volume().fromPintsUS(input);
                 break;
-            case "fl oz":
+            case "fl oz (US)":
                 unitOfVolume = new UnitOf.Volume().fromFluidOuncesUS(input);
                 break;
-            case "tbsp":
+            case "tbsp (US)":
                 unitOfVolume = new UnitOf.Volume().fromTablespoonsUS(input);
                 break;
-            case "tsp":
+            case "tsp (US)":
                 unitOfVolume = new UnitOf.Volume().fromTeaspoonsUS(input);
                 break;
         }

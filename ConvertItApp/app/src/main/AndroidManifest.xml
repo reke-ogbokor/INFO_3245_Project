@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"></activity>
-        <activity android:name=".Area" />
+        <activity
+            android:name=".Area"
+            android:label="Area"/>
         <activity
             android:name=".Volume"
             android:label="Volume" />
