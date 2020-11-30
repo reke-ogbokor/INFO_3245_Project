@@ -37,7 +37,7 @@ public class tempConvert extends AppCompatActivity {
                 result1 = (temp *1.8) + 32;
                 tempResult.setText(String.valueOf(result1));
                 ImageView img=(ImageView)findViewById(R.id.flag);
-                img.setBackgroundResource(R.drawable.usaflag);
+                img.setBackgroundResource(R.drawable.canadaflag);
             }
         });
 
@@ -48,7 +48,7 @@ public class tempConvert extends AppCompatActivity {
                 result2 = (temp - 32) / 1.8;
                 tempResult.setText(String.valueOf(result2));
                 ImageView img=(ImageView)findViewById(R.id.flag);
-                img.setBackgroundResource(R.drawable.canadaflag);
+                img.setBackgroundResource(R.drawable.usaflag);
             }
         });
 
